@@ -6,6 +6,11 @@
     box-sizing: border-box;
     height: 100%;
     width: 100%;
+    font-family: roboto;
+}
+
+p{
+    height: auto;
 }
 
 html {
@@ -23,17 +28,104 @@ body{
 }
 
 .header {
-    height: 100px; /* temporary*/
+    height: auto;
     background-color: white;
     grid-column: 2/3;
+    grid-row: 1/2;
+    box-shadow: 0px 5px 5px rgb(0, 0, 0, 50%);
+
+    display: grid;
+    grid-template-rows: auto auto;
+    z-index: 1;
+}
+
+.header-upper{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto 1fr auto auto auto;
+    padding: 10px 30px 5px 30px;
+}
+
+.header-upper img{
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    justify-self: center;
+    align-self: center;
+}
+
+.header-upper svg {
+    height: 30px;
+    width: auto;
+    justify-self: center;
+    align-self: center;
+}
+
+.header-upper div{
+    background-color: #E2E8F0;
+    border-radius: 30px;
+    height: 30px;
+    width: auto;
+    align-self: center;
+    margin-right: 80px;
+}
+
+.header-upper p{
+    align-self: center;
+    justify-self: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.header-lower{
+    height: fit-content;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto auto;
+    gap: 20px;
+    padding: 5px 30px 10px 30px;
+}
+
+.header-lower img{
+    align-self: center;
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.header-lower div{
+    align-self: center;
+    height: auto;
+}
+
+.header-lower p{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#name {
+    font-size: 24px;
+}
+
+.header-lower button{
+    height: 40px;
+    width: 100px;
+    align-self: center;
+    border-radius: 20px;
+    border: 0px;
+    background-color: #1A92D3;
+    color: white;
+    font-weight: 600;
 }
 
 .sidebar {
     background-color: #1A92D3;
-
     grid-row: 1/3;
+    grid-column: 1/2;
     display: grid;
     grid-template-rows: 2fr 5fr 5fr;
+    z-index: 1;
 }
 
 .logo {
@@ -56,8 +148,6 @@ body{
 .logo p,
 .options p,
 .settings p {
-    height: auto;
-    font-family: roboto;
     font-size: 28px;
     font-weight: 600;
     color: white;
@@ -96,30 +186,69 @@ body{
 
 .content-left {
     padding: 30px;
-    
 }
 
 .content-left p {
-    height: auto;
-    font-family: roboto;
     font-size: 18px;
 }
 
 .project-cards{
     height: auto;
     display: grid;
+    margin: 20px 0px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
 .project-cards div{
-    height: 200px;
+    height: 250px;
     background-color: white;
     border-left: 10px solid gold;
     border-radius: 10px;
+    padding: 30px;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 10px;
+}
+
+#project-name {
+    font-size: 16px;
+}
+
+#project-details{
+    font-size: 14px;
+}
+
+#icons{
+    padding: 0;
+    gap: 10px;
+    border-radius: 0;
+    height: auto;
+    border: none;
+    display: flex;
+    justify-content: end;
+}
+
+#icons svg{
+    height: 20px;
+    width: auto;
 }
 
 .content-right {
     display: grid;
     grid-template-rows: 1fr 1fr;
+
+    padding: 30px;
+}
+
+.content-right div p {
+    font-size: 18px;
+}
+
+.content-right div div{
+    height: 82%;
+    background-color: white;
+    margin: 20px 0px;
+    border-radius: 10px;
 }
