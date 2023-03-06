@@ -8,6 +8,14 @@
     width: 100%;
 }
 
+html {
+    height: 100%;
+}
+
+body{
+    height: 100%;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -15,8 +23,8 @@
 }
 
 .header {
+    height: 100px; /* temporary*/
     background-color: white;
-
     grid-column: 2/3;
 }
 
@@ -34,7 +42,9 @@
     grid-template-columns: 2fr 5fr;
 }
 
-.logo svg, .options svg, .settings svg{
+.logo svg,
+.options svg,
+.settings svg {
     width: 50px;
     height: auto;
     fill: white;
@@ -43,7 +53,9 @@
     align-self: center;
 }
 
-.logo p, .options p, .settings p{
+.logo p,
+.options p,
+.settings p {
     height: auto;
     font-family: roboto;
     font-size: 28px;
@@ -53,18 +65,21 @@
     align-self: center;
 }
 
-.options, .settings{
+.options,
+.settings {
     grid-row: 2/3;
     display: grid;
     grid-template-columns: 2fr 5fr;
     grid-template-rows: repeat(7, 1fr);
 }
 
-.options svg, .settings svg{
+.options svg,
+.settings svg {
     width: 30px;
 }
 
-.options p, .settings p{
+.options p,
+.settings p {
     font-size: 20px;
     font-weight: 400;
 }
@@ -75,4 +90,36 @@
 
 .main-content {
     background-color: #E2E8F0;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+}
+
+.content-left {
+    padding: 30px;
+    
+}
+
+.content-left p {
+    height: auto;
+    font-family: roboto;
+    font-size: 18px;
+}
+
+.project-cards{
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-cards div{
+    height: 200px;
+    background-color: white;
+    border-left: 10px solid gold;
+    border-radius: 10px;
+}
+
+.content-right {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
