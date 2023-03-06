@@ -214,10 +214,12 @@ body{
 
 #project-name {
     font-size: 16px;
+    font-weight: 800;
 }
 
 #project-details{
     font-size: 14px;
+    color: gray;
 }
 
 #icons{
@@ -238,7 +240,7 @@ body{
 .content-right {
     display: grid;
     grid-template-rows: 1fr 1fr;
-
+    gap: 20px;
     padding: 30px;
 }
 
@@ -247,8 +249,79 @@ body{
 }
 
 .content-right div div{
-    height: 82%;
+    height: auto;
     background-color: white;
-    margin: 20px 0px;
+    margin-top: 20px;
+    padding: 10px 20px;
     border-radius: 10px;
 }
+
+#announcement{
+    display: grid;
+    grid-template-rows: repeat(3,auto);
+}
+
+#announcement div{
+    padding: 10px 0px;
+    border-radius: 0;
+    margin: 0;
+    border-bottom: 1px solid black;
+}
+
+#announcement :last-child{
+    border: none;
+}
+
+#announcement-name{
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+#announcement-details{
+    font-size: 14px;
+    color: gray;
+}
+
+.trending {
+    display: grid;
+    grid-template-rows: repeat(4,auto);
+}
+
+.trending div {
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0;
+}
+
+#trending-div{
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+    padding: 0;
+}
+
+#trending-div img{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#trending-div div{
+    padding: 0;
+    margin: 0;
+    height: auto;
+    width: auto;
+    align-self: center;
+}
+
+#user-name, #user-handle{
+    font-size: 14px;
+}
+
+#user-handle {
+    color: grey;
+}
+
+
