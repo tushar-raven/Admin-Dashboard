@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+.header {
+    background-color: white;
+
+    grid-column: 2/3;
+}
+
+.sidebar {
+    background-color: #1A92D3;
+
+    grid-row: 1/3;
+    display: grid;
+    grid-template-rows: 2fr 5fr 5fr;
+}
+
+.logo {
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+}
+
+.logo svg, .options svg, .settings svg{
+    width: 50px;
+    height: auto;
+    fill: white;
+
+    justify-self: center;
+    align-self: center;
+}
+
+.logo p, .options p, .settings p{
+    height: auto;
+    font-family: roboto;
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+
+    align-self: center;
+}
+
+.options, .settings{
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-template-rows: repeat(7, 1fr);
+}
+
+.options svg, .settings svg{
+    width: 30px;
+}
+
+.options p, .settings p{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.settings {
+    grid-row: 3/4;
+}
+
+.main-content {
+    background-color: #E2E8F0;
+}
